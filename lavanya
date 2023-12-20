@@ -24,6 +24,13 @@ pipeline {
                     steps{
                             git 'https://github.com/intelliqittrainings/FunctionalTesting.git' 
 		    }
-               } 
+               }
+                stage("ContDelivery")
+                {
+                    steps{
+                            deploy adapters: [tomcat9(credentialsId: 'f24490cf-fe42-4bbe-bedf-593dcc5b4ceb', path: '', url: 'http://172.31.40.10:8080')], contextPath: 'prodapp3', war: '**/*.war'
+		    }
+
+		}
 	}
 }
