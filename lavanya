@@ -19,5 +19,8 @@ pipeline {
 		 }
                  
                }
+		stage("testing"){
+			git 'https://github.com/intelliqittrainings/FunctionalTesting.git'
+			sh "java -jar /var/lib/jenkins/workspace/project-1/testing/testing.jar"
 	}
 }
