@@ -6,5 +6,12 @@ pipeline {
 				git "https://github.com/majjilavanya/maven2.git"
 			}
 		}
+                stage("ContBuild")
+                {
+                 steps{
+                          sh sh 'mvn package'
+                      }
+               }
+                
 	}
 }
