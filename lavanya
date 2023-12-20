@@ -9,7 +9,7 @@ pipeline {
                 stage("ContBuild")
                 {
                  steps{
-                          sh sh 'mvn package'
+                           sh 'mvn package'
                       }
                }
                 
