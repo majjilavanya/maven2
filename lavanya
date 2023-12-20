@@ -1,0 +1,8 @@
+pipeline {
+	agent any 
+	stages {
+		stage("download code"){
+			git "https://github.com/majjilavanya/maven2.git"
+		}
+	}
+}
