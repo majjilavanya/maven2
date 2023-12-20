@@ -19,6 +19,11 @@ pipeline {
 		 }
                  
                }
-                
+               stage("ContTesting")
+                {
+                    steps{
+                            git 'https://github.com/intelliqittrainings/FunctionalTesting.git' 
+		    }
+               } 
 	}
 }
